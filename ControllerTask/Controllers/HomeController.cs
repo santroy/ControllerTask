@@ -16,10 +16,13 @@ namespace ControllerTask.Controllers
         }
 
         [HttpPost]
-        public string SendEmail(Message m)
+        public ActionResult SendEmail(Message m)
         {
-            return string.Format("Otrzymałeś wiadomość od {0}, temat: {1}, wiadomość: {2}.",
-                m.Email, m.Topic, m.Text);
+            //return string.Format("Otrzymałeś wiadomość od {0}, temat: {1}, wiadomość: {2}.",
+            //    m.Email, m.Topic, m.Text);
+
+            return View("EmailConfirmation",m);
+
         }
     }
 }

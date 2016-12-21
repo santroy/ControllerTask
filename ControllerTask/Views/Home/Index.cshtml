@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Formularz kontaktowy</title>
+</head>
+<body>
+    <div> 
+        <form action="/Home/SendEmail" method="post">
+
+            <label for="Email">E-mail</label>
+            <input type="text" name="Email" id="Email" />
+
+            <label for="Topic">Temat</label>
+            <input type="text" name="Topic" id="Topic" />
+
+            <label for="Text">Wiadomość</label>
+            <input type="text" name="Text" id="Text" />
+
+            <input type="submit" value="Wyślij" />
+
+        </form>
+    </div>
+</body>
+</html>
